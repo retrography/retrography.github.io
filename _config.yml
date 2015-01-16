@@ -2,8 +2,8 @@ markdown: redcarpet
 highlighter: null
 permalink: /:title
 
-url:
-baseurl:
+url: http://retrography.github.io
+baseurl: http://retrography.github.io
 
 redcarpet:
   extensions: [strikethrough, tables]
