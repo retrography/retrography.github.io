@@ -6,6 +6,8 @@ keywords: "r neo4j graphs databases statistics sna code gist"
 ---
 There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:
 
+{% gist retrography/fdbf658116ddb7fa7c51 %}
+
 {% highlight r linenos %}
 library('RCurl')
 library('RJSONIO')
@@ -24,9 +26,7 @@ query <- function(querystring) {
   names(data) <- result$columns
   
   data 
-}
-{% endhighlight %}
- 
+} 
  
 # EXAMPLE
 # =======
@@ -36,6 +36,7 @@ query <- function(querystring) {
 match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
 " 
 >data <-query(q)
+{% endhighlight %}
 
 ***Caution:*** This script runs into trouble if the query response is in a non-tabular format or includes missing values. 
 

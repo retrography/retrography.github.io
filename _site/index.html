@@ -162,6 +162,8 @@
 
     <p>There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:</p>
 
+<script src="https://gist.github.com/retrography/fdbf658116ddb7fa7c51.js"> </script>
+
 <div class="highlight"><pre><code class="language-r" data-lang="r"><span class="lineno"> 1</span> <span class="kn">library</span><span class="p">(</span><span class="s">&#39;RCurl&#39;</span><span class="p">)</span>
 <span class="lineno"> 2</span> <span class="kn">library</span><span class="p">(</span><span class="s">&#39;RJSONIO&#39;</span><span class="p">)</span>
 <span class="lineno"> 3</span> 
@@ -179,20 +181,16 @@
 <span class="lineno">15</span>   <span class="kp">names</span><span class="p">(</span>data<span class="p">)</span> <span class="o">&lt;-</span> result<span class="o">$</span>columns
 <span class="lineno">16</span>   
 <span class="lineno">17</span>   data 
-<span class="lineno">18</span> <span class="p">}</span></code></pre></div>
-
-<h1>EXAMPLE</h1>
-
-<h1>=======</h1>
-
-<h1>Cypher Query:</h1>
-
-<blockquote>
-<p>q &lt;- &quot;
-match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
-&quot; 
-data &lt;-query(q)</p>
-</blockquote>
+<span class="lineno">18</span> <span class="p">}</span> 
+<span class="lineno">19</span>  
+<span class="lineno">20</span> <span class="c1"># EXAMPLE</span>
+<span class="lineno">21</span> <span class="c1"># =======</span>
+<span class="lineno">22</span>  
+<span class="lineno">23</span> <span class="c1"># Cypher Query:</span>
+<span class="lineno">24</span> <span class="o">&gt;</span>q <span class="o">&lt;-</span> <span class="s">&quot;</span>
+<span class="lineno">25</span> <span class="s">match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20</span>
+<span class="lineno">26</span> <span class="s">&quot;</span> 
+<span class="lineno">27</span> <span class="o">&gt;</span>data <span class="o">&lt;-</span>query<span class="p">(</span><span class="kp">q</span><span class="p">)</span></code></pre></div>
 
 <p><strong><em>Caution:</em></strong> This script runs into trouble if the query response is in a non-tabular format or includes missing values. </p>
 
