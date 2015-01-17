@@ -59,6 +59,11 @@
 .highlight .vg { color: #033 } /* Name.Variable.Global */
 .highlight .vi { color: #033 } /* Name.Variable.Instance */
 .highlight .il { color: #f60 } /* Literal.Number.Integer.Long */
+div.line span.pl-k, div.line span.pl-v { color: #099 !important }
+/*pre.line-pre div.line, */
+div.line span.pl-ent { color: #2f6f9f !important }
+div.line span.pl-e { color: #4f9fcf !important }
+div.line span.pl-s1 { color: #d44950 !important }
 
 .css .o,
 .css .o + .nt,

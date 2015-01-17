@@ -11,7 +11,7 @@
 
   <title>
     
-      Retrography &middot; Keep writing back...
+      Retrography &middot; backwardly writing...
     
   </title>
 
@@ -30,7 +30,7 @@
 </head>
 
 
-  <body>
+  <body class="theme-base-08 layout-reverse sidebar-overlay">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
@@ -66,9 +66,9 @@
       
     
 
-    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+<!--    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
     <a class="sidebar-nav-item" href="">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v1.0.0</span>
+    <span class="sidebar-nav-item">Currently v1.0.0</span> -->
   </nav>
 
   <div class="sidebar-item">
@@ -86,7 +86,7 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="/" title="Home">Retrography</a>
-            <small>Keep writing back...</small>
+            <small>backwardly writing...</small>
           </h3>
         </div>
       </div>
@@ -96,205 +96,107 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/01/02/introducing-lanyon/">
-        Introducing Lanyon
+      <a href="/2014/10/27/so-scriptella-works-with-neo4j/">
+        So, Scriptella Works With Neo4j
       </a>
     </h1>
 
-    <span class="post-date">02 Jan 2014</span>
+    <span class="post-date">27 Oct 2014</span>
 
-    <p>Lanyon is an unassuming <a href="http://jekyllrb.com">Jekyll</a> theme that places content first by tucking away navigation in a hidden drawer. It&#39;s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+    <p>We all know that Neo4j&#39;s Cypher has recently had a language upgrade to accommodate ETL. Yes, the graph engine now supports <code>LOAD CSV</code> within Cypher scripts. </p>
 
-<h3>Built on Poole</h3>
+<p>CSV is a great data interchange format, specially because one can edit, manipulate and filter it with simple command line tools. The only caveat is that it requires a full export of all data into a text-only format with no widely-accepted standard for reading and writing it. </p>
 
-<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Lanyon here) includes the following:</p>
+<p>You may run into issues as simple as text encoding and as complicated as converting string array fields into plain text. Furthermore, <code>LOAD CSV</code> is only for importing. </p>
 
-<ul>
-<li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
-<li>Mobile friendly design and development</li>
-<li>Easily scalable text and component sizing with <code>rem</code> units in the CSS</li>
-<li>Support for a wide gamut of HTML elements</li>
-<li>Related posts (time-based, because Jekyll) below each post</li>
-<li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
-</ul>
+<p>What if we need to migrate some data back to the good old RDBMS? Isn&#39;t there a better, one-shot way for migrating some of our precious graph data into another database? </p>
 
-<h3>Lanyon features</h3>
+<p>Thanks to <a href="https://github.com/neo4j-contrib/neo4j-jdbc">Neo4j&#39;s JDBC driver</a>, you can. But then most end-user ETL or data migration applications don&#39;t really like a driver that speaks Cypher rather than SQL, and run into all sorts of errors while trying to automatize some aspects of your data access when using Neo4j&#39;s JDBC driver. </p>
 
-<p>In addition to the features of Poole, Lanyon adds the following:</p>
+<p>One tool that lets you benefit from all the facilities offered by the standardized Java database interfaces and yet perfectly obeys your orders is <a href="http://scriptella.javaforge.com">Scriptella</a>. </p>
 
-<ul>
-<li>Toggleable sliding sidebar (built with only CSS) via <strong>☰</strong> link in top corner</li>
-<li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
-<li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code>&lt;body&gt;</code> classes</li>
-<li><a href="https://github.com/poole/lanyon#themes">Eight optional color schemes</a>, available via <code>&lt;body&gt;</code> classes</li>
-</ul>
+<p>Below is a Scriptella configuration code that shows how to use MySQL and Neo4j JDBC drivers along with Scriptella to run an ETL process. All you need to do is to put the <code>etl.xml</code> file in Scriptella&#39;s <code>bin</code> directory, the JDBC driver files in <code>lib</code> directory, and run Scriptella. </p>
 
-<p><a href="https://github.com/poole/lanyon#readme">Head to the readme</a> to learn more.</p>
+<script src="https://gist.github.com/retrography/1295ba19d0caa73a5dfe.js"> </script>
 
-<h3>Browser support</h3>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="lineno"> 1</span> <span class="cp">&lt;!DOCTYPE etl SYSTEM &quot;http://scriptella.javaforge.com/dtd/etl.dtd&quot;&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;etl&gt;</span>
+<span class="lineno"> 3</span>     <span class="nt">&lt;description&gt;</span>Scriptella ETL File Template.<span class="nt">&lt;/description&gt;</span>
+<span class="lineno"> 4</span>     
+<span class="lineno"> 5</span>     <span class="c">&lt;!-- Connections with batch-loading configuration --&gt;</span>    
+<span class="lineno"> 6</span>     <span class="nt">&lt;connection</span> <span class="na">id=</span><span class="s">&quot;graph&quot;</span> <span class="na">driver=</span><span class="s">&quot;org.neo4j.jdbc.Driver&quot;</span> 
+<span class="lineno"> 7</span>         <span class="na">url=</span><span class="s">&quot;jdbc:neo4j://graphserver:7474&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>         statement.fetchSize = 1000
+<span class="lineno"> 9</span>     <span class="nt">&lt;/connection&gt;</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>     <span class="nt">&lt;connection</span> <span class="na">id=</span><span class="s">&quot;project&quot;</span> <span class="na">driver=</span><span class="s">&quot;com.mysql.jdbc.Driver&quot;</span> 
+<span class="lineno">12</span>         <span class="na">url=</span><span class="s">&quot;jdbc:mysql://sqlserver:3306/database&quot;</span> <span class="na">user=</span><span class="s">&quot;root&quot;</span> <span class="na">password=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">13</span>         statement.batchSize = 1000
+<span class="lineno">14</span>     <span class="nt">&lt;/connection&gt;</span>
+<span class="lineno">15</span>     
+<span class="lineno">16</span>     <span class="c">&lt;!-- ETL Queries and Scripts --&gt;</span>
+<span class="lineno">17</span>     <span class="nt">&lt;query</span> <span class="na">connection-id=</span><span class="s">&quot;graph&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">18</span>         MATCH (p:Package)-[r1]-(f:File)-[r2]-(s:Snippet) 
+<span class="lineno">19</span>         RETURN p.title AS package, f.name AS file, s.sha AS sha 
+<span class="lineno">20</span>         ORDER BY p.title;
+<span class="lineno">21</span> 
+<span class="lineno">22</span>         <span class="nt">&lt;script</span> <span class="na">connection-id=</span><span class="s">&quot;project&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">23</span>             INSERT INTO test (package, file, sha) 
+<span class="lineno">24</span>             VALUES (?package, ?file, ?sha);
+<span class="lineno">25</span>         <span class="nt">&lt;/script&gt;</span>
+<span class="lineno">26</span>     <span class="nt">&lt;/query&gt;</span>
+<span class="lineno">27</span> <span class="nt">&lt;/etl&gt;</span></code></pre></div>
 
-<p>Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
-
-<h3>Download</h3>
-
-<p>Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.</p>
-
-<p>Thanks!</p>
+<p><a href="https://gist.github.com/retrography/1295ba19d0caa73a5dfe#file-etl-xml">Gist</a> | <a href="https://gist.github.com/retrography/1295ba19d0caa73a5dfe/download">Download</a></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2014/01/01/example-content/">
-        Example content
+      <a href="/2014/05/03/so-one-day-neo4j-goes-to-r/">
+        So, One Day Neo4j Goes to R
       </a>
     </h1>
 
-    <span class="post-date">01 Jan 2014</span>
+    <span class="post-date">03 May 2014</span>
 
-    <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
+    <p>There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">library(&#39;RCurl&#39;)
+library(&#39;RJSONIO&#39;)
 
-<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+query &lt;- function(querystring) {
+  h = basicTextGatherer()
+  curlPerform(url=&quot;http://localhost:7474/db/data/cypher&quot;,
+    postfields=paste(&#39;query&#39;,curlEscape(querystring), sep=&#39;=&#39;),
+    writefunction = h$update,
+    verbose = FALSE
+  )
 
-<blockquote>
-<p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-</blockquote>
+  result &lt;- fromJSON(h$value())
 
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+  data &lt;- data.frame(t(sapply(result$data, unlist)))
+  names(data) &lt;- result$columns
 
-<h2>Inline HTML elements</h2>
+  data 
+}
 
-<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
 
-<ul>
-<li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
-<li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
-<li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code>&lt;abbr&gt;</code>, with an optional <code>title</code> attribute for the full phrase.</li>
-<li>Citations, like <cite>&mdash; Mark otto</cite>, should use <code>&lt;cite&gt;</code>.</li>
-<li><del>Deleted</del> text should use <code>&lt;del&gt;</code> and <ins>inserted</ins> text should use <code>&lt;ins&gt;</code>.</li>
-<li>Superscript <sup>text</sup> uses <code>&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code>&lt;sub&gt;</code>.</li>
-</ul>
+# EXAMPLE
+# =======
 
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+# Cypher Query:
+&gt;q &lt;- &quot;
+match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
+&quot; 
+&gt;data &lt;-query(q)
+</code></pre></div>
+<p><strong><em>Caution:</em></strong> This script runs into trouble if the query response is in a non-tabular format or includes missing values. </p>
 
-<h2>Heading</h2>
+<p>Neo4j does not support null-valued properties and any property with a null value is removed from the database. In other words running <code>SET node.property = NULL</code> elicits the same result as running <code>REMOVE node.property</code>, which means it deletes the property. Neo4j&#39;s REST API responds to queries in JSON, which is schema-less as well, and does not represent missing properties in any way. When converting the JSON output to a tabular format, this results in rows with variable number of columns. </p>
 
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<p>In case your database contains missing values, either replace them with symbolic values or convert them on the fly within your query. If none of these is an option, you need to use a tabular format like CSV for data interchange.</p>
 
-<h3>Code</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis <code>code element</code> montes, nascetur ridiculus mus.</p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;return a + b&quot;</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span></code></pre></div>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-
-<h3>Lists</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-<ul>
-<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-<li>Donec id elit non mi porta gravida at eget metus.</li>
-<li>Nulla vitae elit libero, a pharetra augue.</li>
-</ul>
-
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-
-<ol>
-<li>Vestibulum id ligula porta felis euismod semper.</li>
-<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-</ol>
-
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
-
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<h3>Tables</h3>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<hr>
-
-<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2013/12/31/whats-jekyll/">
-        What's Jekyll?
-      </a>
-    </h1>
-
-    <span class="post-date">31 Dec 2013</span>
-
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project&#39;s readme</a>:</p>
-
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>It&#39;s an immensely useful tool and one we encourage you to use here with Hyde.</p>
-
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+<p><a href="https://gist.github.com/retrography/fdbf658116ddb7fa7c51#file-neo4r_example-r">Gist</a> | <a href="https://gist.github.com/retrography/fdbf658116ddb7fa7c51/download">Download</a> - Credit goes to <a href="https://gist.github.com/mhermans">Maarten Hermans</a></p>
 
   </div>
   

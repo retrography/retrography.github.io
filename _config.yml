@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               Retrography
-tagline:             'Keep writing back...'
+tagline:             'backwardly writing...'
 description:         'This is where I put the rest of the stuff.'
 url:                 http://retrography.github.com
 baseurl:             /

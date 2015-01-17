@@ -3,12 +3,12 @@ layout: page
 title: About
 ---
 
-No about but about.
+Sweet about me:
+
+    {% highlight bash%}
+    echo "Hello world." | tr . !
+    {% endhighlight %}
 
 
-> dfsfdsd
-> fsdfsd
-
-    didid ya nadidi
 
 
