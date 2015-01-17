@@ -4,7 +4,7 @@
  <title>Retrography</title>
  <link href="http://retrography.github.com/atom.xml" rel="self"/>
  <link href="http://retrography.github.com/"/>
- <updated>2015-01-16T22:49:41-05:00</updated>
+ <updated>2015-01-16T22:55:03-05:00</updated>
  <id>http://retrography.github.com</id>
  <author>
    <name>Mahmood Zargar</name>
@@ -71,35 +71,39 @@
    <updated>2014-05-03T00:00:00-04:00</updated>
    <id>http://retrography.github.com/2014/05/03/so-one-day-neo4j-goes-to-r</id>
    <content type="html">&lt;p&gt;There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;library(&amp;#39;RCurl&amp;#39;)
-library(&amp;#39;RJSONIO&amp;#39;)
 
-query &amp;lt;- function(querystring) {
-  h = basicTextGatherer()
-  curlPerform(url=&amp;quot;http://localhost:7474/db/data/cypher&amp;quot;,
-    postfields=paste(&amp;#39;query&amp;#39;,curlEscape(querystring), sep=&amp;#39;=&amp;#39;),
-    writefunction = h$update,
-    verbose = FALSE
-  )
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;RCurl&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;RJSONIO&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; query &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;querystring&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   h &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; basicTextGatherer&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;   curlPerform&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://localhost:7474/db/data/cypher&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;     postfields&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;paste&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;query&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;curlEscape&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;querystring&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;=&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     writefunction &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;update&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     verbose &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;   result &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; fromJSON&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;value&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;   
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;   data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;sapply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;unlist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;   &lt;span class=&quot;kp&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; result&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;columns
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;   
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt;   data 
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-  result &amp;lt;- fromJSON(h$value())
+&lt;h1&gt;EXAMPLE&lt;/h1&gt;
 
-  data &amp;lt;- data.frame(t(sapply(result$data, unlist)))
-  names(data) &amp;lt;- result$columns
+&lt;h1&gt;=======&lt;/h1&gt;
 
-  data 
-}
+&lt;h1&gt;Cypher Query:&lt;/h1&gt;
 
-
-# EXAMPLE
-# =======
-
-# Cypher Query:
-&amp;gt;q &amp;lt;- &amp;quot;
+&lt;blockquote&gt;
+&lt;p&gt;q &amp;lt;- &amp;quot;
 match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
 &amp;quot; 
-&amp;gt;data &amp;lt;-query(q)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+data &amp;lt;-query(q)&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Caution:&lt;/em&gt;&lt;/strong&gt; This script runs into trouble if the query response is in a non-tabular format or includes missing values. &lt;/p&gt;
 
 &lt;p&gt;Neo4j does not support null-valued properties and any property with a null value is removed from the database. In other words running &lt;code&gt;SET node.property = NULL&lt;/code&gt; elicits the same result as running &lt;code&gt;REMOVE node.property&lt;/code&gt;, which means it deletes the property. Neo4j&amp;#39;s REST API responds to queries in JSON, which is schema-less as well, and does not represent missing properties in any way. When converting the JSON output to a tabular format, this results in rows with variable number of columns. &lt;/p&gt;

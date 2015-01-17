@@ -6,34 +6,36 @@ keywords: "r neo4j graphs databases statistics sna code gist"
 ---
 There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:
 
-    library('RCurl')
-    library('RJSONIO')
-    
-    query <- function(querystring) {
-      h = basicTextGatherer()
-      curlPerform(url="http://localhost:7474/db/data/cypher",
-        postfields=paste('query',curlEscape(querystring), sep='='),
-        writefunction = h$update,
-        verbose = FALSE
-      )
-     
-      result <- fromJSON(h$value())
-      
-      data <- data.frame(t(sapply(result$data, unlist)))
-      names(data) <- result$columns
-      
-      data 
-    }
-     
-     
-    # EXAMPLE
-    # =======
-     
-    # Cypher Query:
-    >q <- "
-    match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
-    " 
-    >data <-query(q)
+{% highlight r linenos %}
+library('RCurl')
+library('RJSONIO')
+
+query <- function(querystring) {
+  h = basicTextGatherer()
+  curlPerform(url="http://localhost:7474/db/data/cypher",
+    postfields=paste('query',curlEscape(querystring), sep='='),
+    writefunction = h$update,
+    verbose = FALSE
+  )
+ 
+  result <- fromJSON(h$value())
+  
+  data <- data.frame(t(sapply(result$data, unlist)))
+  names(data) <- result$columns
+  
+  data 
+}
+{% endhighlight %}
+ 
+ 
+# EXAMPLE
+# =======
+ 
+# Cypher Query:
+>q <- "
+match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
+" 
+>data <-query(q)
 
 ***Caution:*** This script runs into trouble if the query response is in a non-tabular format or includes missing values. 
 

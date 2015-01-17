@@ -161,35 +161,39 @@
     <span class="post-date">03 May 2014</span>
 
     <p>There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">library(&#39;RCurl&#39;)
-library(&#39;RJSONIO&#39;)
 
-query &lt;- function(querystring) {
-  h = basicTextGatherer()
-  curlPerform(url=&quot;http://localhost:7474/db/data/cypher&quot;,
-    postfields=paste(&#39;query&#39;,curlEscape(querystring), sep=&#39;=&#39;),
-    writefunction = h$update,
-    verbose = FALSE
-  )
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="lineno"> 1</span> <span class="kn">library</span><span class="p">(</span><span class="s">&#39;RCurl&#39;</span><span class="p">)</span>
+<span class="lineno"> 2</span> <span class="kn">library</span><span class="p">(</span><span class="s">&#39;RJSONIO&#39;</span><span class="p">)</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> query <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>querystring<span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5</span>   h <span class="o">=</span> basicTextGatherer<span class="p">()</span>
+<span class="lineno"> 6</span>   curlPerform<span class="p">(</span>url<span class="o">=</span><span class="s">&quot;http://localhost:7474/db/data/cypher&quot;</span><span class="p">,</span>
+<span class="lineno"> 7</span>     postfields<span class="o">=</span><span class="kp">paste</span><span class="p">(</span><span class="s">&#39;query&#39;</span><span class="p">,</span>curlEscape<span class="p">(</span>querystring<span class="p">),</span> sep<span class="o">=</span><span class="s">&#39;=&#39;</span><span class="p">),</span>
+<span class="lineno"> 8</span>     writefunction <span class="o">=</span> h<span class="o">$</span>update<span class="p">,</span>
+<span class="lineno"> 9</span>     verbose <span class="o">=</span> <span class="kc">FALSE</span>
+<span class="lineno">10</span>   <span class="p">)</span>
+<span class="lineno">11</span>  
+<span class="lineno">12</span>   result <span class="o">&lt;-</span> fromJSON<span class="p">(</span>h<span class="o">$</span>value<span class="p">())</span>
+<span class="lineno">13</span>   
+<span class="lineno">14</span>   data <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span><span class="kp">sapply</span><span class="p">(</span>result<span class="o">$</span>data<span class="p">,</span> <span class="kp">unlist</span><span class="p">)))</span>
+<span class="lineno">15</span>   <span class="kp">names</span><span class="p">(</span>data<span class="p">)</span> <span class="o">&lt;-</span> result<span class="o">$</span>columns
+<span class="lineno">16</span>   
+<span class="lineno">17</span>   data 
+<span class="lineno">18</span> <span class="p">}</span></code></pre></div>
 
-  result &lt;- fromJSON(h$value())
+<h1>EXAMPLE</h1>
 
-  data &lt;- data.frame(t(sapply(result$data, unlist)))
-  names(data) &lt;- result$columns
+<h1>=======</h1>
 
-  data 
-}
+<h1>Cypher Query:</h1>
 
-
-# EXAMPLE
-# =======
-
-# Cypher Query:
-&gt;q &lt;- &quot;
+<blockquote>
+<p>q &lt;- &quot;
 match (o:Organization)-[r]-(p:Person) return o.name,o.location,p.account,p.name,p.email limit 20
 &quot; 
-&gt;data &lt;-query(q)
-</code></pre></div>
+data &lt;-query(q)</p>
+</blockquote>
+
 <p><strong><em>Caution:</em></strong> This script runs into trouble if the query response is in a non-tabular format or includes missing values. </p>
 
 <p>Neo4j does not support null-valued properties and any property with a null value is removed from the database. In other words running <code>SET node.property = NULL</code> elicits the same result as running <code>REMOVE node.property</code>, which means it deletes the property. Neo4j&#39;s REST API responds to queries in JSON, which is schema-less as well, and does not represent missing properties in any way. When converting the JSON output to a tabular format, this results in rows with variable number of columns. </p>
