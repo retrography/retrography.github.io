@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "So, Scriptella Works With Neo4j"
+title: "So, Scriptella works with Neo4j"
 date: 2014-10-27
 tags: "gist code sna databases graphs neo4j sql cypher mysql xml scriptella etl java jdbc"
 ---
@@ -20,37 +20,3 @@ One tool that lets you benefit from all the facilities offered by the standardiz
 Below is a Scriptella configuration code that shows how to use MySQL and Neo4j JDBC drivers along with Scriptella to run an ETL process. All you need to do is to put the `etl.xml` file in Scriptella's `bin` directory, the JDBC driver files in `lib` directory, and run Scriptella. 
 
 {% gist retrography/1295ba19d0caa73a5dfe %}
-
-{% highlight xml linenos %}
-<!DOCTYPE etl SYSTEM "http://scriptella.javaforge.com/dtd/etl.dtd">
-<etl>
-    <description>Scriptella ETL File Template.</description>
-    
-    <!-- Connections with batch-loading configuration -->    
-    <connection id="graph" driver="org.neo4j.jdbc.Driver" 
-        url="jdbc:neo4j://graphserver:7474">
-        statement.fetchSize = 1000
-    </connection>
-
-    <connection id="project" driver="com.mysql.jdbc.Driver" 
-        url="jdbc:mysql://sqlserver:3306/database" user="root" password="">
-        statement.batchSize = 1000
-    </connection>
-    
-    <!-- ETL Queries and Scripts -->
-    <query connection-id="graph">
-        MATCH (p:Package)-[r1]-(f:File)-[r2]-(s:Snippet) 
-        RETURN p.title AS package, f.name AS file, s.sha AS sha 
-        ORDER BY p.title;
-
-        <script connection-id="project">
-            INSERT INTO test (package, file, sha) 
-            VALUES (?package, ?file, ?sha);
-        </script>
-    </query>
-</etl>
-{% endhighlight %}
-
-
-[Gist](https://gist.github.com/retrography/1295ba19d0caa73a5dfe#file-etl-xml) | [Download](https://gist.github.com/retrography/1295ba19d0caa73a5dfe/download)
-
