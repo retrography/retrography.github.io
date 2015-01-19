@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "So, One Day Neo4j Goes to R"
+title: "So, one day Neo4j goes to R"
 date: 2014-05-03
 keywords: "r neo4j graphs databases statistics sna code gist"
 ---
 There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:
-
-{% gist retrography/fdbf658116ddb7fa7c51 %}
 
 {% highlight r linenos %}
 library('RCurl')
@@ -44,5 +42,5 @@ Neo4j does not support null-valued properties and any property with a null value
 
 In case your database contains missing values, either replace them with symbolic values or convert them on the fly within your query. If none of these is an option, you need to use a tabular format like CSV for data interchange.
 
-[Gist](https://gist.github.com/retrography/fdbf658116ddb7fa7c51#file-neo4r_example-r) | [Download](https://gist.github.com/retrography/fdbf658116ddb7fa7c51/download) - Credit goes to [Maarten Hermans](https://gist.github.com/mhermans)
+Credit goes to [Maarten Hermans](https://gist.github.com/mhermans)
 
