@@ -4,6 +4,9 @@ title: "So, one day Neo4j goes to R"
 date: 2014-05-03
 keywords: "r neo4j graphs databases statistics sna code gist"
 ---
+
+___This post is obsolete! It has several known bugs. In order to work with Neo4j in R, please refer to Nicole White's [RNeo4j](https://github.com/nicolewhite/Rneo4j).___
+
 There is an easy way to fetch graph data from Neo4j directly into R environment using a simple REST API client:
 
 {% highlight r linenos %}
