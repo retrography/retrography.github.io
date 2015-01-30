@@ -13,7 +13,7 @@ title:               Retrography
 tagline:             'backwardly writing...'
 description:         'This is where I put the rest of the stuff.'
 url:                 http://retrography.github.io
-baseurl:             /
+baseurl:             ''
 paginate:            5
 
 # About/contact
