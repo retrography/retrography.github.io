@@ -7,7 +7,7 @@ tags: "gist code sna databases graphs neo4j sql cypher mysql xml scriptella etl 
 
 We all know that Neo4j's Cypher has recently had a language upgrade to accommodate ETL. Yes, the graph engine now supports `LOAD CSV` within Cypher scripts. 
 
-CSV is a great data interchange format, specially because one can edit, manipulate and filter it with simple command line tools. The only caveat is that it requires a full export of all the data into a text-only format with no widely-accepted standard for reading and writing it. You may run into issues as simple as misdetected text encoding and as complicated as converting string array fields into plain text. Furthermore, `LOAD CSV` covers only the need to import (and not export). 
+CSV is a great data interchange format, specially because one can edit, manipulate and filter it with simple command line tools. The only caveat is that it requires a full export of all the data into a text-only format with no widely-accepted standard for reading and writing it. You may run into issues as simple as misdetected text encoding and as complicated as converting string array fields into plain text. Furthermore, `LOAD CSV` covers only the need to import. 
 
 What if we need to migrate some data back to the good old RDBMS? Isn't there a better, one-shot way for migrating some of our precious graph data into another database? 
 
