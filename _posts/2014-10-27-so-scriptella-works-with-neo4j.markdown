@@ -13,7 +13,7 @@ What if we need to migrate some data back to the good old RDBMS? Isn't there a b
 
 Thanks to [Neo4j's JDBC driver](https://github.com/neo4j-contrib/neo4j-jdbc), you can. But then most end-user ETL or data migration applications don't really like a driver that speaks Cypher rather than SQL, and run into all sorts of errors while trying to automatize some aspects of your data access when using Neo4j's JDBC driver. 
 
-One tool that lets you benefit from all the facilities offered by the standardized Java database interfaces and yet perfectly obeys your orders is [Scriptella](http://scriptella.javaforge.com). 
+One tool that allows you benefit from all the facilities offered by the standardized Java database interfaces and yet perfectly obeys your orders is [Scriptella](http://scriptella.javaforge.com). 
 
 Below is a Scriptella configuration code that shows how to use MySQL and Neo4j JDBC drivers along with Scriptella to run an ETL process. All you need to do is to put the `etl.xml` file in Scriptella's `bin` directory, the JDBC driver files in `lib` directory, and run Scriptella. 
 
