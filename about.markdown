@@ -7,13 +7,13 @@ Sweet about me:
 
     {% highlight json linenos %}
     {
-      "first_name": "Mahmood",
-      "last_name": "Zargar",
+      "first_name": "mahmood",
+      "last_name": "zargar",
       "email": "mahmood at gmail dot com",
       "occupation": {
-        "title": "PhD Candidate",
-        "school": "McGill University",
-        "department": "Desautels Faculty of Management"
+        "title": "phd candidate",
+        "school": "mcgill university",
+        "department": "desautels faculty of management"
       },
       "social": {
         "linkedin": "http://ca.linkedin.com/in/mszargar",
