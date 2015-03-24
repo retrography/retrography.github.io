@@ -5,7 +5,7 @@ title: About
 
 Sweet about me:
 
-    {% highlight json%}
+    {% highlight json linenos %}
     {
       "first_name": "Mahmood",
       "last_name": "Zargar",
