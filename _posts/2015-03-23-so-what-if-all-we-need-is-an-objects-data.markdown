@@ -9,6 +9,6 @@ Sometimes data comes in objects rather than in well-known hierarchical (e.g. JSO
 
 Here is a simple solution: Dump the object as YAML, remove Ruby/Python's object headers, and then reload the YAML as an object. The reloaded YAML will be a hash containing all the values saved in the properties of the object instance. The Ruby source code follows.
 
-{% gist retrography/87b4e25fdecf8307b627 %}
+{% gist retrography/87b4e25fdecf8307b627 hashject.rb %}
 
 The same method should work in python as well, except that instead of removing all the instances of `!ruby/object:`, all `!python/object/apply:`s must be removed.
