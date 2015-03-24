@@ -6,7 +6,6 @@ title: About
 Sweet about me:
 
     {% highlight json linenos %}
-    
     {
       "first_name": "Mahmood",
       "last_name": "Zargar",
@@ -34,7 +33,6 @@ Sweet about me:
         "academic_workflow_workshop": "http://www.slideshare.net/zargar1/digital-workflow-1"
       }
     }
-    
     {% endhighlight %}
 
 
