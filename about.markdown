@@ -28,9 +28,9 @@ Sweet about me:
         "social theory",
         "photography"
       ],
-      "links": {
-        "data_management_course": "http://retrography.github.io/data-management/",
-        "academic_workflow_workshop": "http://www.slideshare.net/zargar1/digital-workflow-1"
+      "teaching": {
+        "data_management": "http://retrography.github.io/data-management/",
+        "academic_workflow": "http://www.slideshare.net/zargar1/digital-workflow-1"
       }
     }
     {% endhighlight %}
