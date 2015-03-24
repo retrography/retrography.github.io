@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:               retrography
 tagline:             'backwardly writing...'
-description:         'Call me Mah. I'm a PhD candidate in management at McGill University. I like data and social theory and here are some related posts. I currently teach a course called <a href="http://retrography.github.io/data-management/">Managing Data and Databases</a>'
+description:         "Call me Mah. I'm a PhD candidate in management at McGill University. I like data and social theory and here are some related posts. I currently teach a course called <a href='http://retrography.github.io/data-management/'>Managing Data and Databases</a>."
 url:                 http://retrography.github.io
 baseurl:             ''
 paginate:            5
