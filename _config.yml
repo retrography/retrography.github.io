@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               retrography
 tagline:             'backwardly writing...'
 description:         "I am a PhD candidate in management at McGill. I like data and social theory. Here are some related posts. Btw, call me mah."
-url:                 'http://retrography.github.io/'
+url:                 'http://retrography.github.io'
 baseurl:             ''
 paginate:            5
 
