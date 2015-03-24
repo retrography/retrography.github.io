@@ -27,7 +27,11 @@ Sweet about me:
         "online communities",
         "social theory",
         "photography"
-      ]
+      ],
+      "links": {
+        "data_management_course": "http://retrography.github.io/data-management/",
+        "academic_workflow_workshop": "http://www.slideshare.net/zargar1/digital-workflow-1"
+      }
     }
     {% endhighlight %}
 
