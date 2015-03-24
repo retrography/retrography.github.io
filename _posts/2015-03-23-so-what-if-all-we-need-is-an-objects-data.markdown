@@ -7,8 +7,8 @@ keywords: "ruby yaml hash json document database convert data object python"
 
 Sometimes data comes in objects rather than in well-known hierarchical (e.g. JSON) or tabular (e.g. CSV) formats. It is not always easy to extract the data embedded in objects, specially when the objects contain other nested objects or data structures and do not offer a string representation of their content. While it is possible to implement a serialization method for any object, one may not want to go that far if only the properties need to be extracted out of the object.
 
-Here is a simple solution: Dump the object as YAML, remove Ruby/Python's object headers, and then reload the YAML as an object. The reloaded YAML will be a hash containing all the values saved in the properties of the object instance. The Ruby source code follows.
+Here is a simple solution: Dump the object as YAML, remove Ruby/Python's object headers, and then reload the YAML as an object. The reloaded YAML will be a hash containing all the values saved in the properties of the object instance. The Ruby code follows. Vist the Gist page to see a conversion sample.
 
 {% gist retrography/87b4e25fdecf8307b627 hashject.rb %}
 
-The same method should work in python as well, except that instead of removing all the instances of `!ruby/object:`, all `!python/object/apply:`s must be removed.
+The same method should be applicable to Python objects, except that instead of Ruby's `!ruby/object:` headers, Python's `!python/object/apply:` headers must be removed. 
