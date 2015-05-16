@@ -273,6 +273,15 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
   border: dashed 1px #dedede;
 }
 
+div.gist > div.gist-file {
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: dashed 1px #dedede;
+}
+
 /*.gist .gist-file {
   font-family: Monaco, Menlo, "Courier New", monospace !important;
   font-size: 3em;    
