@@ -270,7 +270,43 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  border: dashed 1px #dedede;
+  border: dashed 1px #dedede !important;
+}
+
+div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: dashed 1px #dedede !important;
+}
+
+div.gist > div.gist-file > div.gist-data > div.file-data {
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: dashed 1px #dedede !important;
+}
+
+div.gist > div.gist-file > div.gist-data {
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: dashed 1px #dedede !important;
+}
+
+div.gist > div.gist-file > div.gist-syntax {
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: dashed 1px #dedede !important;
 }
 
 div.gist > div.gist-file {
@@ -279,7 +315,7 @@ div.gist > div.gist-file {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  border: dashed 1px #dedede;
+  border: dashed 1px #dedede !important;
 }
 
 /*.gist .gist-file {
