@@ -273,7 +273,7 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
   border: dashed 1px #dedede !important;
   border-right: dashed 1px #dedede !important;
 }
-
+/*
 div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
   webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -313,7 +313,7 @@ div.gist > div.gist-file > div.gist-syntax {
   border: dashed 1px #dedede !important;
   border-right: dashed 1px #dedede !important;
 }
-
+*/
 div.gist > div.gist-file {
   webkit-border-radius: 3px;
   -moz-border-radius: 3px;
