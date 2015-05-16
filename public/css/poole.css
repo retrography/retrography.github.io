@@ -252,8 +252,8 @@ pre.line-pre div.line {
     font-size: 1.15em; 
     line-height: 23px !important; 
     padding-left: 5px;
-    border: dashed 1px #dedede;
 }
+
 td.line-numbers span.line-number {
     font-family: Monaco, Menlo, "Courier New", monospace !important;
     font-size: 0.9em; 
@@ -262,6 +262,11 @@ td.line-numbers span.line-number {
     color: #aaa;
     line-height: 23px !important; 
       
+}
+
+
+div.gist {
+  border: dashed 1px #dedede;
 }
 
 /*.gist .gist-file {
