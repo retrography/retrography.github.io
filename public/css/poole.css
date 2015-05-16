@@ -321,15 +321,6 @@ div.gist > div.gist-file > div.gist-syntax {
   border-right: dashed 1px #dedede !important;
 }
 */
-div.gist > div.gist-file {
-  webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: dashed 1px #dedede !important;
-  border-right: dashed 1px #dedede !important;
-}
 
 /*.gist .gist-file {
   font-family: Monaco, Menlo, "Courier New", monospace !important;
