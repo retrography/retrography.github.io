@@ -156,9 +156,14 @@ abbr[title] {
   font-weight: normal;
   font-style: normal;
 }*/
-
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/public/font/inconsolata.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 code {
-  font-family: Monaco, Menlo, "Courier New", monospace;
+  font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
   padding: .25em .5em;
   font-size: 0.85em;
   color: #bf616a;
@@ -169,7 +174,7 @@ code {
 }
 
 div.highlight pre {
-  font-family: Monaco, Menlo, "Courier New", monospace;
+  font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
   margin-bottom: 30px;
   white-space: pre;
   overflow-x: auto;
@@ -248,14 +253,14 @@ pre span.lineno:only-of-type {
 /* Gist via GitHub Pages */
 
 pre.line-pre div.line {
-    font-family: Monaco, Menlo, "Courier New", monospace !important;
+    font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 1.15em; 
     line-height: 23px !important; 
     padding-left: 5px;
 }
 
 td.line-numbers span.line-number {
-    font-family: Monaco, Menlo, "Courier New", monospace !important;
+    font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 0.9em; 
     padding-left: 5px;
     padding-right: 5px;
