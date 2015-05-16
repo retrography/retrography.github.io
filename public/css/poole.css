@@ -149,13 +149,6 @@ abbr[title] {
 
 /* Code */
 
-/*@font-face {
-  font-family: 'blanchcaps';
-  src: url("fonts/blanch_caps-webfont.eot");
-  src: url("fonts/blanch_caps-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/blanch_caps-webfont.woff") format("woff"), url("fonts/blanch_caps-webfont.ttf") format("truetype"), url("fonts/blanch_caps-webfont.svg#blanchcaps") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}*/
 @font-face {
   font-family: 'Inconsolata';
   src: url('/public/font/inconsolata.otf') format("opentype");
@@ -164,13 +157,12 @@ abbr[title] {
 }
 code {
   font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
-  padding: .25em .5em;
+  padding: .25em .25em;
   font-size: 0.85em;
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 3px;
 /*  line-height: 1.5em;*/
-
 }
 
 div.highlight pre {
@@ -200,7 +192,7 @@ pre code {
 /*  font-size: 85%;*/
   color: inherit;
   background-color: transparent;
-  line-height: 1.4em;
+  line-height: 1.3em;
 }
 
 pre span.lineno {
