@@ -176,21 +176,22 @@ div.highlight pre {
   word-break: inherit;
   font-size: 0.8em;
   line-height: 1em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   background-color: #fdfdfd;
-  -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.75), inset 0 1px 3px rgba(0, 0, 0, 0.07);
+  /*-webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.75), inset 0 1px 3px rgba(0, 0, 0, 0.07);
   -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.75), inset 0 1px 3px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px rgba(255, 255, 255, 0.75), inset 0 1px 3px rgba(0, 0, 0, 0.07);
-  border: solid 1px #dedede;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.75), inset 0 1px 3px rgba(0, 0, 0, 0.07);*/
+  border: dashed 1px #dedede;
   overflow-y: hidden;
+  
 }
 
 pre code {
-  padding: 0;
+  padding: 0px;
 /*  font-size: 85%;*/
   color: inherit;
   background-color: transparent;
@@ -222,9 +223,9 @@ pre span.lineno {
 
 pre span.lineno:first-of-type {
   padding-top: 10px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.9) 0px 1px 1px inset;
+  /*-webkit-box-shadow: rgba(255, 255, 255, 0.9) 0px 1px 1px inset;
   -moz-box-shadow: rgba(255, 255, 255, 0.9) 0px 1px 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.9) 0px 1px 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.9) 0px 1px 1px inset;*/
 }
 
 pre span.lineno:last-of-type {
@@ -238,7 +239,7 @@ pre span.lineno:only-of-type {
 /* Pygments via Jekyll */
 .highlight {
   margin-bottom: 1rem;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .highlight pre {
   margin-bottom: 0;
@@ -307,9 +308,7 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  /*margin: 0 0 1rem;*/
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 1rem;
   border-radius: 5px;
 }
 
@@ -319,6 +318,7 @@ table {
   width: 100%;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
+  background-color: #fdfdfd;
 }
 td,
 th {
