@@ -11,9 +11,9 @@ relative_permalinks: true
 # Setup
 title:               retrography
 tagline:             'backwardly writing...'
-description:         "I am a PhD candidate in management at McGill. I like data and social theory. Here are some related posts. Btw, call me mah."
+description:         "I am Mahmood S. Zargar, a PhD candidate in McGill's Desautels Faculty of Management. I am passionate about social theory and have a knack for data wrangling. My research is about the organizational aspects of online communities. Here are some related posts. Btw, call me Mah."
 url:                 'http://retrography.github.io'
-baseurl:             ''
+baseurl:             '/'
 paginate:            5
 
 # About/contact
