@@ -155,6 +155,7 @@ abbr[title] {
   font-weight: normal;
   font-style: normal;
 }
+
 code {
   font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
   padding: .25em .25em;
@@ -162,7 +163,7 @@ code {
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 3px;
-/*  line-height: 1.5em;*/
+  line-height: 1.1em;
 }
 
 div.highlight pre {
@@ -192,7 +193,7 @@ pre code {
 /*  font-size: 85%;*/
   color: inherit;
   background-color: transparent;
-  line-height: 1.3em;
+  line-height: 1.4em;
 }
 
 pre span.lineno {
