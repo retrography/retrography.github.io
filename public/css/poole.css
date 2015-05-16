@@ -269,7 +269,8 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;border: dashed 1px #dedede;
+  border-radius: 3px;
+  border: dashed 1px #dedede;
 }
 
 /*.gist .gist-file {
