@@ -239,7 +239,7 @@ pre span.lineno:only-of-type {
 
 div.post > div.gist {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
-    font-size: 1em; 	
+    font-size: inherit; 	
 }
 
 pre.line-pre div.line {
