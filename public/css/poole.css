@@ -298,18 +298,42 @@ div.gist > div.gist-file > div.gist-data > div.file-data {
   border-right: dashed 1px #dedede !important;
 }
 
-div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
-  webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border-left: dashed 1px #dedede !important;
-  border-right: dashed 1px #dedede !important;
-  border-top: dashed 1px #dedede !important;
-  border-bottom: 0 !important;
-}
 */
+
+div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers {
+    font-size: 0.8em;
+    width: 25px;
+    text-align: right;
+    opacity: 0.7;
+    color: #aaa;
+    background: #eee;
+    margin-right: 5px;
+    padding-right: 25px;
+    padding-left: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-right: 1px solid #dedede;
+    user-select: none;
+    text-decoration: none;
+}
+
+pre span.lineno {
+  font-size: 0.8em;
+  width: 25px;
+  text-align: right;
+  opacity: 0.7;
+  display: inline-block;
+  color: #aaa;
+  background: #eee;
+  margin-right: 5px;
+  padding-right: 25px;
+  padding-left: 13px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-right: 1px solid #dedede;
+  user-select: none;
+  text-decoration: none;
+}
 
 div.gist > div.gist-file > div.gist-syntax {
     border-top-left-radius: 4px;
