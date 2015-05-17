@@ -270,22 +270,23 @@ div.gist table.lines td.line-numbers > span.line-number {
     border-right: 1px solid #dedede;
     user-select: none;
     text-decoration: none;
-	width: 39px;
-    margin-right: 5px;
-    padding-right: 25px;
-    padding-left: 13px;
+    padding-right: 10px;
+	margin-right: 5px;
 }
 
 div.gist table.lines td.line-numbers > span.line-number:first-of-type {
   padding-top: 10px;
   border-top-left-radius: 4px;
   border: 0px !important;
+  padding-right: 10px;
+  margin-right: 5px;
 }
 
 div.gist table.lines td.line-numbers > span.line-number:last-of-type {
-  border-bottom-left-radius: 4px;
   padding-bottom: 10px;
   border: 0px !important;
+  padding-right: 10px;
+  margin-right: 5px;
 }
 
 div.gist table.lines td.line-numbers > span.line-number:only-of-type {
@@ -293,7 +294,8 @@ div.gist table.lines td.line-numbers > span.line-number:only-of-type {
   padding-bottom: 10px;
   border: 0px !important;
   border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  padding-right: 10px;
+  margin-right: 5px;
 }
 
 div.gist table.lines td.line-numbers {
