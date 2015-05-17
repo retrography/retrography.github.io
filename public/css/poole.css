@@ -237,10 +237,15 @@ pre span.lineno:only-of-type {
 
 /* Gist via GitHub Pages */
 
+div.post > div.gist {
+    font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
+    font-size: 1em; 	
+}
+
 pre.line-pre div.line {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
-    font-size: 1.15em; 
-    line-height: 23px !important; 
+    font-size: 0.8em; 
+    line-height: 1.4em !important; 
     padding-left: 5px;
 }
 
