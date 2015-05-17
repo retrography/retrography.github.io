@@ -290,23 +290,20 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
 }
 
 div.gist > div.gist-file {		
-	border-left: 0 !important;
+  border-left: 0 !important;
   border-right: 0 !important;
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
 
-/*
-div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
-  webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: dashed 1px #dedede !important;
-  border-right: dashed 1px #dedede !important;
-}
 
+div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+}
+/*
 div.gist > div.gist-file > div.gist-data > div.file-data {
   webkit-border-radius: 3px;
   -moz-border-radius: 3px;
