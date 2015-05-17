@@ -257,6 +257,11 @@ pre.line-pre div.line {
     background-color: #fdfdfd;
 }
 
+div.gist td.line-data > pre.line-pre {
+    line-height: 17.92px !important; 
+    font-size: 14px; 
+}
+
 div.gist table.lines td.line-numbers > span.line-number {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 10px; 
