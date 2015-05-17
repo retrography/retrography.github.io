@@ -168,7 +168,7 @@ abbr[title] {
 code {
   font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
   padding: 0.20em 0.30em 0.25em 0.30em;
-  font-size: 0.8em;
+  font-size: 14px; 
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 4px;
@@ -180,8 +180,8 @@ div.highlight pre {
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
-  font-size: 0.8em;
-  line-height: 1em;
+  font-size: 14px; 
+  line-height: 17.92px !important; 
   border-radius: 4px;
   background-color: #fdfdfd;
   border: dashed 1px #dedede;
@@ -196,7 +196,8 @@ pre code {
 }
 
 pre span.lineno {
-  font-size: 0.8em;
+  font-size: 10px; 
+  line-height: 17.92px !important; 
   width: 25px;
   text-align: right;
   opacity: 0.7;

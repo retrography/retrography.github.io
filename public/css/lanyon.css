@@ -104,15 +104,15 @@ body {
 }
 
 html {
-  font-family: "Vollkorn", Georgia, "Times New Roman", serif;
+  font-family: "Tenro Sans", Georgia, "Times New Roman", serif;
   font-style: Regular;
-  line-height: 28px;
+  line-height: 30px;
   font-size: 21px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Tenor Sans", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-family: "Vollkorn", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
 }
@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "Tenor Sans", Helvetica, Arial, sans-serif;
+  font-family: "Vollkorn", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
