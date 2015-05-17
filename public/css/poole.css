@@ -283,6 +283,7 @@ div.gist table.lines td.line-numbers {
     border: 0px !important;
 	background: #eee;
 	width: 39px;
+	padding: 0px;
 }
 
 /*
