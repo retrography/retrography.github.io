@@ -331,13 +331,15 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines {
 */
 
 div.gist > div.gist-file > div.gist-syntax {
-  webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  border: dashed 1px #dedede !important;
-  border-right: dashed 1px #dedede !important;
+    webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    border-left: dashed 1px #dedede !important;
+    border-right: dashed 1px #dedede !important;
+    border-top: dashed 1px #dedede !important;
+    border-bottom: 0 !important;
 }
 
 
