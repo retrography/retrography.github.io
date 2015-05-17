@@ -1,6 +1,6 @@
 ---
 layout: page
-title: sweet about me
+title: about
 ---
 
     {% highlight json linenos %}
