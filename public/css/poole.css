@@ -252,8 +252,12 @@ pre.line-pre div.line {
 }
 
 div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers > span.line-number {
-    font-size: 0.8em;
-    width: 25px;
+    font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
+    font-size: 13px; 
+    line-height: 17.92px !important; 
+	font-weight: 100;
+	word-break: normal;
+
     text-align: right;
     opacity: 0.7;
     color: #aaa;
@@ -271,7 +275,6 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
 }
 
 div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers {
-    width: 25px;
 /*    margin-right: 5px;*/
     padding-right: 10px;
     padding-left: 13px;
