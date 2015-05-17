@@ -244,9 +244,11 @@ div.post > div.gist {
 
 pre.line-pre div.line {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
-    font-size: 0.8em; 
-    line-height: 1.4em !important; 
+    font-size: 13px; 
+    line-height: 17.92px !important; 
     padding-left: 5px;
+	font-weight: 100;
+	word-break: normal;
 }
 
 div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers > span.line-number {
@@ -316,7 +318,6 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
     border-right: 0 !important;
     border-top: 0 !important;
     border-bottom: 0 !important;
-    font-size: 1em;
 }
 /*
 div.gist > div.gist-file > div.gist-data > div.file-data {
