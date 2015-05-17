@@ -153,13 +153,14 @@ div.circular {
 html,
 body {
   overflow-x: hidden;
+  letter-spacing: 0.025em;
 }
 
 html {
   font-family: "Cabin", Georgia, "Times New Roman", serif;
-  font-style: Regular;
-  line-height: 28px;
-  font-size: 18px;
+  font-style: normal;
+  line-height: 26px;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
