@@ -34,15 +34,14 @@
 
 @font-face {
     font-family: 'Inconsolata';
-    src: url('inconsolata-webfont.eot');
-    src: url('inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
-         url('inconsolata-webfont.woff2') format('woff2'),
-         url('inconsolata-webfont.woff') format('woff'),
-         url('inconsolata-webfont.ttf') format('truetype'),
-         url('inconsolata-webfont.svg#inconsolata_for_powerlineMd') format('svg');
+    src: url('/public/font/inconsolata-webfont.eot');
+    src: url('/public/font/inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/font/inconsolata-webfont.woff2') format('woff2'),
+         url('/public/font/inconsolata-webfont.woff') format('woff'),
+         url('/public/font/inconsolata-webfont.ttf') format('truetype'),
+         url('/public/font/inconsolata-webfont.svg#inconsolata_for_powerlineMd') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
