@@ -49,11 +49,11 @@
  */
 
 div.circular {
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
 	background: url(/public/image/me.jpg) no-repeat;
 	}
 
