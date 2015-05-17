@@ -185,8 +185,7 @@ div.highlight pre {
   border-radius: 4px;
   background-color: #fdfdfd;
   border: dashed 1px #dedede;
-  overflow-y: hidden;
-  
+  overflow-y: hidden;  
 }
 
 pre code {
@@ -229,7 +228,7 @@ pre span.lineno:only-of-type {
 /* Pygments via Jekyll */
 .highlight {
   margin-bottom: 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 .highlight pre {
   margin-bottom: 0;
@@ -272,6 +271,18 @@ div.gist table.lines td.line-numbers > span.line-number {
     user-select: none;
     text-decoration: none;
 	width: 39px;
+}
+
+div.gist table.lines td.line-numbers > span.line-number:first-of-type {
+  padding-top: 10px;
+}
+
+div.gist table.lines td.line-numbers > span.line-number:last-of-type {
+  padding-bottom: 10px;
+}
+
+div.gist table.lines td.line-numbers > span.line-number:only-of-type {
+  padding: 10px;
 }
 
 div.gist table.lines td.line-numbers {
