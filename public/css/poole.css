@@ -271,6 +271,7 @@ div.gist table.lines td.line-numbers > span.line-number {
     border-right: 1px solid #dedede;
     user-select: none;
     text-decoration: none;
+	width: 39px;
 }
 
 div.gist table.lines td.line-numbers {
@@ -281,6 +282,7 @@ div.gist table.lines td.line-numbers {
 	border-bottom-left-radius: 4px;
     border: 0px !important;
 	background: #eee;
+	width: 39px;
 }
 
 /*
