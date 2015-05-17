@@ -237,14 +237,14 @@ pre span.lineno:only-of-type {
 
 /* Gist via GitHub Pages */
 
-div.post > div.gist {
+div.post div.gist {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: inherit; 
     line-height: 17.92px !important; 
     font-size: 13px; 
 }
 
-pre.line-pre > div.line {
+pre.line-pre div.line {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 13px; 
     line-height: 17.92px !important; 
@@ -275,8 +275,6 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
 
 div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers {
     line-height: 17.92px !important; 
-    padding-right: 10px;
-    padding-left: 13px;
     user-select: none;
     text-decoration: none;
     border-top-left-radius: 4px;
