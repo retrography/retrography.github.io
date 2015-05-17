@@ -44,6 +44,18 @@
     font-style: normal;
 }
 
+/*
+ * Headshot
+ */
+
+div.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(/public/image/me.jpg) no-repeat;
+	}
 
 /*
  * Body resets
@@ -247,7 +259,7 @@ div.post div.gist {
 pre.line-pre div.line {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 14px; 
-    line-height: 17.92px !important; 
+    /*line-height: 17.92px !important; */
 	font-weight: 100;
 	word-break: normal;
     padding-top: 2px;
