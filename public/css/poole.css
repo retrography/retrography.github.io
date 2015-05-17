@@ -323,10 +323,8 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
 }
 
 div.gist > div.gist-file {		
-  border-left: 0 !important;
-  border-right: 0 !important;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
+    border: dashed 1px #dedede !important;
+    border-radius: 4px;
 }
 
 
@@ -337,12 +335,6 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.highlight {
     border-top: 0 !important;
     border-bottom: 0 !important;
 }
-
-div.gist > div.gist-file > div.gist-data > div.file-data {
-  border: dashed 1px #dedede !important;
-  border-radius: 4px;
-}
-
 
 
 div.gist > div.gist-file > div.gist-syntax {
@@ -358,30 +350,6 @@ div.gist > div.gist-file > div.gist-meta {
     background: #eee;
 }
 
-/*.gist .gist-file {
-  font-family: Monaco, Menlo, "Courier New", monospace !important;
-  font-size: 3em;    
-  
-}
-.gist .markdown-body {
-  padding: 15px;
-}
-.gist pre {
-  padding: 0;
-  background-color: transparent;
-}
-.gist .gist-file .file-data {*/
-/*  font-size: .9rem !important;*/
- /* line-height: 1.4;
-}
-.gist lines {
-  font-family: Monaco, Menlo, "Courier New", monospace !important;
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
-}
-*/
 /* Quotes */
 
 blockquote {
