@@ -253,9 +253,10 @@ pre.line-pre div.line {
 	word-break: normal;
     padding-top: 2px;
     padding-bottom: 2px;
+    background-color: #fdfdfd;
 }
 
-div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers > span.line-number {
+div.gist table.lines td.line-numbers > span.line-number {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: 10px; 
     padding-top: 2px;
@@ -272,13 +273,14 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
     text-decoration: none;
 }
 
-div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody > tr > td.line-numbers {
+div.gist table.lines td.line-numbers {
     line-height: 17.92px !important; 
     user-select: none;
     text-decoration: none;
     border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
     border: 0px !important;
+	background: #eee;
 }
 
 /*
@@ -299,6 +301,7 @@ div.gist > div.gist-file > div.gist-data > div.file-data > table.lines > tbody >
   border-right: 0 !important;
   border-top: 0 !important;
   border-bottom: 0 !important;
+  background-color: #fdfdfd;
 }
 
 div.gist > div.gist-file {		
