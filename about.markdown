@@ -1,11 +1,10 @@
 ---
 layout: page
-title: about
+title: sweet about me
 ---
 
-Sweet about me:
-
     {% highlight json linenos %}
+    
     {
       "first_name": "mahmood",
       "last_name": "zargar",
@@ -33,6 +32,7 @@ Sweet about me:
         "academic_workflow": "http://www.slideshare.net/zargar1/digital-workflow-1"
       }
     }
+
     {% endhighlight %}
 
 
