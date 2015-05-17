@@ -169,7 +169,8 @@ abbr[title] {
 code {
   font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace;
   padding: 0.20em 0.30em 0.25em 0.30em;
-  font-size: 14px; 
+  font-size: 14px;
+  line-height: 17.92px !important;  
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 4px;
@@ -193,7 +194,7 @@ pre code {
   padding: 0px;
   color: inherit;
   background-color: transparent;
-  line-height: 1.4em;
+  /*line-height: 1.4em;*/
 }
 
 pre span.lineno {
@@ -242,7 +243,7 @@ div.post div.gist {
     font-family: Inconsolata, Monaco, Menlo, "Courier New", monospace !important;
     font-size: inherit; 
     line-height: 17.92px !important; 
-    font-size: 13px; 
+    font-size: 14px; 
 }
 
 pre.line-pre div.line {
