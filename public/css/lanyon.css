@@ -80,13 +80,49 @@
 }
 
 @font-face {
-    font-family: 'Tenor Sans';
-    src: url('/public/font/tenorsans-regular-webfont.eot');
-    src: url('/public/font/tenorsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/public/font/tenorsans-regular-webfont.woff2') format('woff2'),
-         url('/public/font/tenorsans-regular-webfont.woff') format('woff'),
-         url('/public/font/tenorsans-regular-webfont.ttf') format('truetype'),
-         url('/public/font/tenorsans-regular-webfont.svg#tenor_sansregular') format('svg');
+    font-family: 'Cabin';
+    src: url('/public/font/cabin-bold-webfont.eot');
+    src: url('/public/font/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/font/cabin-bold-webfont.woff2') format('woff2'),
+         url('/public/font/cabin-bold-webfont.woff') format('woff'),
+         url('/public/font/cabin-bold-webfont.ttf') format('truetype'),
+         url('/public/font/cabin-bold-webfont.svg#cabinbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('cabin-bolditalic-webfont.eot');
+    src: url('cabin-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cabin-bolditalic-webfont.woff2') format('woff2'),
+         url('cabin-bolditalic-webfont.woff') format('woff'),
+         url('cabin-bolditalic-webfont.ttf') format('truetype'),
+         url('cabin-bolditalic-webfont.svg#cabinbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('/public/font/cabin-italic-webfont.eot');
+    src: url('/public/font/cabin-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/font/cabin-italic-webfont.woff2') format('woff2'),
+         url('/public/font/cabin-italic-webfont.woff') format('woff'),
+         url('/public/font/cabin-italic-webfont.ttf') format('truetype'),
+         url('/public/font/cabin-italic-webfont.svg#cabinitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cabin';
+    src: url('/public/font/cabin-regular-webfont.eot');
+    src: url('/public/font/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/font/cabin-regular-webfont.woff2') format('woff2'),
+         url('/public/font/cabin-regular-webfont.woff') format('woff'),
+         url('/public/font/cabin-regular-webfont.ttf') format('truetype'),
+         url('/public/font/cabin-regular-webfont.svg#cabinregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -120,7 +156,7 @@ body {
 }
 
 html {
-  font-family: "Tenor Sans", Georgia, "Times New Roman", serif;
+  font-family: "Cabin", Georgia, "Times New Roman", serif;
   font-style: Regular;
   line-height: 28px;
   font-size: 18px;
@@ -266,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
-  font-family: "Tenor Sans", Georgia, "Times New Roman", serif;
+  font-family: "Cabin", Georgia, "Times New Roman", serif;
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
@@ -444,7 +480,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Tenor Sans", Helvetica, Arial, sans-serif;
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
