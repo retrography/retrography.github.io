@@ -6,8 +6,7 @@ title: about
     {% highlight json linenos %}
     
     {
-      "first_name": "mahmood",
-      "last_name": "zargar",
+      "name": "mahmood s. zargar",
       "email": "mahmood at gmail dot com",
       "occupation": {
         "title": "phd candidate",
