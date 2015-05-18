@@ -15,6 +15,7 @@ title: blog
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
+    <span class="post-script">Posted on {{ page.date | date_to_string }} by {{ site.author.name }}</span>
   </div>
   {% endfor %}
 </div>
