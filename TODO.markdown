@@ -1,0 +1,1 @@
+- [ ] Add the COS icon to social media links
