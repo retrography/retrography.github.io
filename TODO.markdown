@@ -1,1 +1,3 @@
 - [ ] Add the COS icon to social media links
+- [ ] Complete the resources page
+- [ ] Complete the post on licenses
