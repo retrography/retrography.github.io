@@ -20,12 +20,12 @@ A list of resources and tools that I find useful, for me and for every researche
 	* [regexplanet](http://www.regexplanet.com) -- testing for all regex flavors
 	* [regxr](http://www.regexr.com) -- testing
 	
-* [Ruby](https://www.ruby-lang.org/en/) -- The most beautiful programming language
+* [Ruby](https://www.ruby-lang.org/en/) -- The pretty
 	* [Interactive Course](http://tryruby.org)
 	* [Mr. Neighborly's Humble Little Ruby Book](http://humblelittlerubybook.com/book/html/index.html)
 	* [Ruby Essentials](http://www.techotopia.com/index.php/Ruby_Essentials)
 
-* [R](https://www.r-project.org) -- The ugliest programming language
+* [R](https://www.r-project.org) -- The nasty
 	* [Fast Intro](http://data.princeton.edu/R)
 	* [DataCamp R Courses](https://www.datacamp.com)
 	* Books
