@@ -93,6 +93,6 @@ A list of resources and tools that I find useful, for me and for every researche
 
 * [Vim](http://www.vim.org/) -- The classic
 * [Textmate](http://macromates.com) -- The pro choice
-* [Atom](https://atom.io) -- The cameleon/editor
+* [Atom](https://atom.io) -- The chameleon/editor
 
 
