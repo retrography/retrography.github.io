@@ -59,9 +59,8 @@ A list of resources and tools that I find useful, for me and for every researche
 ### Shells & Terminals
 
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) -- Very nice set of shell configurations. Use with [agnoster](https://gist.github.com/agnoster/3712874).
-
 * [iTerm2](https://www.iterm2.com/) -- The ultimate terminal
-* [TotalTerminal](http://totalterminal.binaryage.com) -- Quake-style HUD console of OSX
+* [TotalTerminal](http://totalterminal.binaryage.com) -- Quake-style HUD console for OSX
 
 ### Versioning, Repos, Dependency Management
 
