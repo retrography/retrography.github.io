@@ -41,6 +41,9 @@ A list of resources and tools that I find useful, for me and for every researche
 		* [reshape2 Package]
 		* [magrittr Package]
 		* [jsonlite Package]
+	* Cheat Sheets
+		* [R Reference Card 2.0](https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf) -- R in 6 pages
+		* [Data Wrangling with tidyr & deplyr](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 * [Python](https://www.python.org)
 
