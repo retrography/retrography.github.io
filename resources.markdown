@@ -10,8 +10,8 @@ A list of resources and tools that I find useful, for me and for every researche
 ### Languages & Coding Environments
 
 * [Shell Scripting](http://www.freeos.com/guides/lsst/)
-	* [coreutils](http://www.gnu.org/software/coreutils/coreutils.html) -- Perfect set of data tools for the Linux-hearted: cat, tac, cut, paste, head, tail, tr, wc, sort, shuffle, uniq, expr, join, fold, expand, tee, mkfifo
-	* [moreutils](http://joeyh.name/code/moreutils/) -- Some additions to the `coreutils`: sponge, parallel
+	* [coreutils](http://www.gnu.org/software/coreutils/coreutils.html) -- Perfect set of data tools for the Linux-hearted: `cat`, `tac`, `cut`, `paste`, `head`, `tail`, `tr`, `wc`, `sort`, `shuffle`, `uniq`, `expr`, `join`, `fold`, `expand`, `tee`, `mkfifo`
+	* [moreutils](http://joeyh.name/code/moreutils/) -- Some additions to the `coreutils`: `sponge`, `parallel`
 	* [grep/egrep](http://www.grymoire.com/Unix/Grep.html) -- Text matching using Regular Expressions
 	* [sed](http://www.grymoire.com/Unix/Sed.html) -- Text replacement using Regular Expressions
 	
@@ -40,7 +40,7 @@ A list of resources and tools that I find useful, for me and for every researche
 		* [dplyr Package]() -- Data Frame manipulation made easy ([Intro](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) | [Course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) | [CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) | [On plyr](http://seananderson.ca/2013/12/01/plyr.html))
 		* [tidyr Package](https://cran.r-project.org/web/packages/tidyr/index.html) -- Unmess your data ([Vignette](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) | [CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
 		* [reshape2 Package](https://cran.r-project.org/web/packages/reshape2/index.html) -- From wide to long data and vice versa ([Intro](http://seananderson.ca/2013/10/19/reshape.html))
-		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) | [dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
+		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([Vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) | [dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
 		* [jsonlite Package](https://cran.r-project.org/web/packages/jsonlite/index.html) -- From JSON to Data Frame
 		* [lubridate Package](https://cran.r-project.org/web/packages/lubridate/index.html) -- Date/Time lubricated and on steroids ([Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html))
 		* [stringr Package](https://cran.r-project.org/web/packages/stringr/index.html) -- Strings for mere mortals ([Vignette](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html))
@@ -82,7 +82,7 @@ A list of resources and tools that I find useful, for me and for every researche
 
 ### Compute
 
-* [Compute Canada](https://www.computecanada.ca) -- Maple leaf computing force
+* [Compute Canada](https://www.computecanada.ca) -- Maple Leaf computing force
 * [Calcul Quebec](http://www.calculquebec.ca/en/) -- Je me souviens computing force
 * [McGill HPC](http://www.hpc.mcgill.ca) -- Martlet computing force
 * [terminal.com](https://www.terminal.com) -- Pausible virtual machines
