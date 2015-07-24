@@ -42,8 +42,8 @@ A list of resources and tools that I find useful, for me and for every researche
 		* [reshape2 Package](https://cran.r-project.org/web/packages/reshape2/index.html) -- From wide to long data and vice versa ([Intro](http://seananderson.ca/2013/10/19/reshape.html))
 		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)|[dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
 		* [jsonlite Package](https://cran.r-project.org/web/packages/jsonlite/index.html) -- JSON to Data Frame
-		* [lubridate package]()
-		* [stringr package]()
+		* [lubridate package](https://cran.r-project.org/web/packages/lubridate/index.html) -- Date/Time lubricated and on steroids ([Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html))
+		* [stringr package](https://cran.r-project.org/web/packages/stringr/index.html) -- Strings for mere mortals ([Vignette](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html))
 
 * [Python](https://www.python.org) -- The serious
 
