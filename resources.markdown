@@ -32,20 +32,20 @@ A list of resources and tools that I find useful, for me and for every researche
 		* [R Cookbook](http://www.cookbook-r.com) -- Introductory book
 		* [The Art of R Programming](http://heather.cs.ucdavis.edu/~matloff/132/NSPpart.pdf) -- Introduction and beyond
 		* [The Bible](http://adv-r.had.co.nz) -- by Hadley Wickham
+	* [R Reference Card 2.0](https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf) -- R in 6 pages
 	
 	* [RStudio](https://www.rstudio.com) -- The IDE
 	* [Revolution R](https://mran.revolutionanalytics.com/download/) -- The better, faster R
 	* Packages
-		* [dplyr Package]
-		* [tidyr Package]
-		* [reshape2 Package]
-		* [magrittr Package]
-		* [jsonlite Package]
-	* Cheat Sheets
-		* [R Reference Card 2.0](https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf) -- R in 6 pages
-		* [Data Wrangling with tidyr & deplyr](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+		* [dplyr Package]() -- Data Frame manipulation made easy ([Intro](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)|[Course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial)|[CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)|[On plyr](http://seananderson.ca/2013/12/01/plyr.html))
+		* [tidyr Package](https://cran.r-project.org/web/packages/tidyr/index.html) -- Unmess your data ([Vignette](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)|[CheatSheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
+		* [reshape2 Package](https://cran.r-project.org/web/packages/reshape2/index.html) -- From wide to long data and vice versa ([Intro](http://seananderson.ca/2013/10/19/reshape.html))
+		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)|[dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
+		* [jsonlite Package](https://cran.r-project.org/web/packages/jsonlite/index.html) -- JSON to Data Frame
+		* [lubridate package]()
+		* [stringr package]()
 
-* [Python](https://www.python.org)
+* [Python](https://www.python.org) -- The serious
 
 * [Julia](http://julialang.org) -- The junior
 	* [juliabox](https://www.juliabox.org) -- Julia testdrive
@@ -65,7 +65,7 @@ A list of resources and tools that I find useful, for me and for every researche
 ### Versioning, Repos, Dependency Management
 
 * [Homebrew](http://brew.sh) -- OSX's missing package manager. You need this to install most of the tools mentioned here.
-* [Homebrew Cask](http://caskroom.io) -- Automated software installed for OSX
+* [Homebrew Cask](http://caskroom.io) -- Automated software installer for OSX
 
 * [Git](http://www.git-scm.com) -- Linus Torvald's choice of versioning system
 	* [Fast Intro](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
