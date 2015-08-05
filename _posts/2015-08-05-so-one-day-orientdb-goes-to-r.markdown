@@ -7,7 +7,7 @@ keywords: "r orientdb graphs databases statistics sna code driver"
 
 ![OrientDB](https://upload.wikimedia.org/wikipedia/en/d/dc/OrientdbLogo.png)
 
-Lately I have been relying on [OrientDB](http://orientdb.com) in order to store my raw data before transferring it to the analysis software like R. OrientDB is the first multi-model database I have ever used, and has turned out to be a great choice as a pre-analysis data storage system. 
+Lately, I have been relying on [OrientDB](http://orientdb.com) in order to store my raw data before transferring it to the analysis software like R. OrientDB is the first multi-model database I have ever used, and has turned out to be a great choice as a pre-analysis data storage system. 
 
 Multi-model databases allow the user to save the data using one model (lets say document) and retrieving it using another (e.g. graph). In OrientDB one can query the data as simple tables, or as a document collection, or even as a graph. OrientDB support schemas, but it is pretty relax about them and allows schema-less data just like a document database. It also allows traversing from a document to the other through explicit links, just as a graph database does. But at heart OrientDB is an object-oriented database. It sees everything, any record, edge, vertex or document as a nested or nestable object. Finally, OrientDB supports user-defined functions and complex types such as DateTime. All these makes it an extraordinary data gathering tool for the researcher.
 
