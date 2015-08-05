@@ -5,7 +5,7 @@ date: 2015-08-05
 keywords: "r orientdb graphs databases statistics sna code driver"
 ---
 
-![OrientDB](http://orientdb.com/wp-content/uploads/2014/09/orientdb_logo1.png)
+![OrientDB](https://upload.wikimedia.org/wikipedia/en/d/dc/OrientdbLogo.png)
 
 Lately I have been relying on [OrientDB](http://orientdb.com) in order to store my raw data before transferring it to the analysis software like R. OrientDB is the first multi-model database I have ever used, and has turned out to be a great choice as a pre-analysis data storage system. 
 
