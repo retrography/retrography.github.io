@@ -5,7 +5,7 @@ title: resources
 
 A list of resources and tools that I find useful, for me and for every researcher...
 
-## Data Wrangling
+## Data Wrangling & Analysis
 
 ### Languages & Coding Environments
 
@@ -44,15 +44,38 @@ A list of resources and tools that I find useful, for me and for every researche
 		* [jsonlite Package](https://cran.r-project.org/web/packages/jsonlite/index.html) -- From JSON to Data Frame
 		* [lubridate Package](https://cran.r-project.org/web/packages/lubridate/index.html) -- Date/Time lubricated and on steroids ([Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html))
 		* [stringr Package](https://cran.r-project.org/web/packages/stringr/index.html) -- Strings for mere mortals ([Vignette](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html))
+		* data.table
 
 * [Python](https://www.python.org) -- The serious
 
 * [Julia](http://julialang.org) -- The junior
 	* [juliabox](https://www.juliabox.org) -- Julia testdrive
 
-* [Pig](https://pig.apache.org)
+* [Pig](https://pig.apache.org) -- Playing it big
 	* [Learn Pig](http://help.mortardata.com/technologies/pig/learn_pig)
 	* [Pig Cheatsheet](http://mortar-public-site-content.s3-website-us-east-1.amazonaws.com/Mortar-Pig-Cheat-Sheet.pdf)
+
+* [Gremlin](http://tinkerpop.incubator.apache.org) -- The graph language
+	* [Gremlin Docs](http://gremlindocs.com/)
+	* [Gremlin Tutorial](https://github.com/tinkerpop/gremlin/wiki)
+
+### Graphs & Network Analysis
+
+* [iGraph](http://igraph.org) -- Fast and furious 
+* [Statnet](https://statnet.org) -- The classic
+* [SNAP](http://snap.stanford.edu) -- Up & coming
+* [RSiena](http://www.stats.ox.ac.uk/~snijders/siena/) -- Longitudinal networks
+* [NodeXL](https://nodexl.codeplex.com) -- A first try
+* [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/Pajek/) -- Old McDonald had a farm
+* [GraphX](https://spark.apache.org/graphx/) -- Playing it big
+* [NetworkX](https://networkx.github.io) -- If you need time to sleep
+* [graph-tool](http://graph-tool.skewed.de) -- Up & coming
+
+### Graph Databases
+
+* [OrientDB](http://orientdb.com) -- A database for all seasons
+* [Neo4j](http://neo4j.com) -- The beauty
+* [Titan](http://thinkaurelius.github.io/titan/) -- Playing it big
 
 ## Basics
 
