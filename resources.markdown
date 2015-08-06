@@ -10,7 +10,7 @@ A list of resources and tools that I find useful, for me and for every researche
 ### Languages & Coding Environments
 
 * [Shell Scripting](http://www.freeos.com/guides/lsst/)
-	* [coreutils](http://www.gnu.org/software/coreutils/coreutils.html) -- Perfect set of data tools for the Linux-hearted: `cat`, `tac`, `cut`, `paste`, `head`, `tail`, `tr`, `wc`, `sort`, `shuffle`, `uniq`, `expr`, `join`, `fold`, `expand`, `tee`, `mkfifo`
+	* [coreutils](http://www.gnu.org/software/coreutils/coreutils.html) -- Perfect set of data tools for the Penguin-hearted: `cat`, `tac`, `cut`, `paste`, `head`, `tail`, `tr`, `wc`, `sort`, `shuffle`, `uniq`, `expr`, `join`, `fold`, `expand`, `tee`, `mkfifo`
 	* [moreutils](http://joeyh.name/code/moreutils/) -- Some additions to the `coreutils`: `sponge`, `parallel`
 	* [grep/egrep](http://www.grymoire.com/Unix/Grep.html) -- Text matching using Regular Expressions
 	* [sed](http://www.grymoire.com/Unix/Sed.html) -- Text replacement using Regular Expressions
