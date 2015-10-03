@@ -76,6 +76,7 @@ A list of resources and tools that I find useful, for me and for every researche
 * [OrientDB](http://orientdb.com) -- A database for all seasons
 * [Neo4j](http://neo4j.com) -- The beauty
 * [Titan](http://thinkaurelius.github.io/titan/) -- Playing it big
+* [ArrangoDB](http://www.arangodb.com) -- Up & Coming
 
 ## Basics
 
@@ -91,6 +92,7 @@ A list of resources and tools that I find useful, for me and for every researche
 * [Homebrew Cask](http://caskroom.io) -- Automated software installer for OSX
 
 * [Git](http://www.git-scm.com) -- Linus Torvald's choice of versioning system
+	* [Step by Step for the Beginner](https://blog.udemy.com/git-tutorial-a-comprehensive-guide)
 	* [Fast Intro](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 	* [Interactive Course](https://try.github.io)
 	* [Bible](http://www.git-scm.com/book/en/v2)
@@ -101,7 +103,7 @@ A list of resources and tools that I find useful, for me and for every researche
 * [s3cmd](http://s3tools.org/s3cmd) -- S3 client toolset
 * [Duplicity](http://duplicity.nongnu.org) -- The quintessential incremental backup software
 * [rsync](https://rsync.samba.org) -- Royal sync
-* [Globus](https://www.globus.org) -- Fast and secure data transfer
+* [Globus](https://www.globus.org) -- Fast and secure data transfer for academics
 
 ### Compute
 
