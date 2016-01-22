@@ -227,7 +227,23 @@ I'm a photographer and I really like Tartarian maples. Their color change is com
 
 ![Tartarian Maple](http://oregonstate.edu/dept/ldplants/images/acta207.jpg "Tartarian Maple")
 
+Let's see if there are Tartarian Maples in these two neighborhouds:
 
+```
+grep -i "tartarian maple" alltreesclean.csv
+```
+
+Oh, there are not many actually! Can you extract the address where these trees are located? Do the files follow strictly the same notation?
+
+```
+grep -i "tartarian maple" alltreesclean.csv | cut -d ';' -f 3,4,21,23,24,25
+```
+
+You are ready for an exercise:
+
+There are excessive white spaces inside some of the fields. Try to remove them. (pro tip: Use the regular expression cheatsheet)
+
+New, can you make a clean file with the name of the tree, the neighborhood and a single field that indicates the address in a more or less readable manner, using the commands that you have learned? Let's try together...
 
 # Bonus
 
