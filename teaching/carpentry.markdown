@@ -43,4 +43,11 @@ Go to [Terminal.com](http://terminal.com) and open the Data Carpentry Workshop's
 
 Now try to:
 
-1. Select `Edit Cells | Transform` and then use the following command to replace all French decimal indicators (commas) with dots: `value.replace(',','.')`.
+1. Select `Edit Cells | Transform` from the column "MONTANT"'s contextual menu and then use the following command to replace all French decimal indicators (commas) with dots: `value.replace(',','.')`.
+2. Now use `Edit Cells | Common Transforms | To number` on the same column to convert the values to number.
+3. Now define a facet (Facet | Numeric Facet) on the column. What is the range of the contracts? Select the most expensive contracts (above 5 millions) and sort them numerically.
+4. Now use `Edit Cells | Cluster and edit...` on the "APPROBATEUR FIELD" cluster the alternative spellings.
+5. Use the method "key collision" with function "fingerprint" the first time. Correct all the misspelling.
+6. Now use the method "nearest neighborhood" with function "levenshtein". Isn't this cool?
+
+## Linux command line: The holy grail
