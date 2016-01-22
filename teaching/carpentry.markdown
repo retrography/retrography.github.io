@@ -58,7 +58,7 @@ All the automated tools have their limitations that prevents you from having clo
 
 ### Your first commands
 
-- Download the list of all public trees in downtown Montreal using the following command:
+Download the list of all public trees in downtown Montreal using the following command:
 
 ```
 wget http://donnees.ville.montreal.qc.ca/dataset/3e3efad6-9f2f-4cc0-8f1b-92de1ccdb282/resource/7873dfd4-ff95-40e0-af3a-3c35f784a927/download/villemariearbrespublics20151202.zip
@@ -116,6 +116,8 @@ tail -n +2 trees.csv
 head -n 5 trees.csv | tail -n +2 trees.csv
 ```
 
+> Note: You can use `head` and `tail` to make test slices of the file you need to work on before you load the whole data.
+
 Linux also has a command called `cat` that can display the entirety of a file. You don't really want to try that on such a large file, but maybe you can use it in combination with a pagination software to limit the output:
 
 ```
@@ -159,3 +161,45 @@ cut -d ';' -f 3 alltrees.csv | uniq
 ```
 
 > Note: You must always use the command `sort` on the data you are passing into `uniq`, unless you now for sure that your data is sorted.
+
+```
+cut -d ';' -f 23 alltrees.csv | sort | uniq
+```
+
+You have notices here some names have double quotes around them and some don't. What if we don't want the double quotes? We may remove them with `tr`. The `tr` command replaces characters one by one. It can also delete characters one by one.
+
+```
+cut -d ';' -f 23 alltrees.csv | sort | uniq | tr -d '"'
+```
+
+```
+tail -n +2 out.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq > streets_vm.csv
+tail -n +2 out2.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq > streets_mr.csv
+```
+
+now lets try to put the lists side by side
+
+```
+paste -d ";" streets_mr.csv streets_vm.csv
+```
+
+
+Now let's sort by the street name. We use `sponge` to buffer the changes and then write them back to the same file. If we don't do this, the file simply gets truncated (can't read from and write to the same file).
+
+```
+sort -t ';' -k 2 streets_mr.csv | sponge streets_mr.csv
+sort -t ';' -k 2 streets_vm.csv | sponge streets_vm.csv
+```
+`-r` makes it descending.
+```
+tail -n +2 alltrees.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq | sort -t ';' -k 2
+```
+Are there any streets shared between pleateau and ville marie? can we do a proper database join here?
+
+```
+join -t ';' -1 2 -2 2 streets_mr.csv streets_vm.csv
+```
+
+Not really, no. Only the lines with no steet names matched.
+
+# Regular Expressions: Sorcerer's Trick
