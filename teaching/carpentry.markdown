@@ -6,6 +6,7 @@ title: data carpentry workshop 2016
 # data carpentry workshop
 ## jan. 22, 2016
 
+This workshop goes against the mainstream. It does not attempt to prepare you for analysis, but for pre-analysis. Get the slide deck [here](https://docs.google.com/presentation/d/13pCgBfMjjNaZboFAr7ocx3ryy04GX-okjhwdqUvEtvk/pub).
 
 ## Terminal.com, research scientist's best friend
 
@@ -132,27 +133,27 @@ iconv -f WINDOWS-1252 -t UTF-8 trees.csv > out.csv
 
 Here the `>` (greater than) sign tells the command to save its input inside a file called `out.csv`. This is another useful feature of Linux command line. You can define inputs and outputs for most commands using `<` and `>`. These are called, by order of appearance, standard input (stdin) and standard output (stdout).
 
-Now that you have the file in UTF-8 format have a look at it. Now the characters look good.
+Now that you have the file in UTF-8 format have a look at it. The characters finally look fine.
 
-Another set of very useful Linux commands are `cut` and `paste` These two work with character-delimited files as if they are database files!
-
-get the ones from plateau (and convert on the fly)
-join them with these ones
+How many lines does the file have?
 
 ```
-curl http://donnees.ville.montreal.qc.ca/dataset/3e3efad6-9f2f-4cc0-8f1b-92de1ccdb282/resource/0cd2ff7a-039a-40ac-8844-ce6465cac2a2/download/leplateaumontroyalarbrespublics20151202.zip | tar xv
-iconv -f WINDOWS-1252 -t UTF-8 Le_Plateau_Mont_Royal_Arbres_publics_2015_12_02.csv> out2.csv
-tail -n +2 out2.csv > out3.csv
-cat out.csv out3.csv > alltrees.csv
+wc -l out.csv
 ```
 
-now you have a 80mb file!
+You are ready for an exercise:
 
-now let's try to extract some information
+- Get the file for Plateau trees: http://donnees.ville.montreal.qc.ca/dataset/3e3efad6-9f2f-4cc0-8f1b-92de1ccdb282/resource/0cd2ff7a-039a-40ac-8844-ce6465cac2a2/download/leplateaumontroyalarbrespublics20151202.zip
+- Uncompress it
+- Convert the text encoding to UTF-8
+- Concatenate the two _datasets_ (pro tip: `cat` command can take more than one file)
+- How many lines does your new line have?
 
-let's see if we have downloaded the right files and there are only trees from downtown and pleateau in the file.
+Don't look at [the solution](https://gist.github.com/retrography/4fd419f89b318dd83eb1) immediately. Try first!
 
-In order to do this, we need to extract one column of the file. That would eb the 3rd column. (see with `head` command).
+Now let's try to extract some of the information to work with. Another set of very useful Linux commands are `cut` and `paste`. These two work with character-delimited files as if they were real databases!
+
+Let's check to see if we have downloaded the right files and there are only trees from downtown and Plateau in the file. In order to do this, we need to extract the distinct values in one column of the file: The 3rd column. (see with `head` command).
 
 Now we use `cut` to get out that specific column. But we only need the distinct values, so we pipe the results into a command aptly called `uniq`.
 
@@ -160,46 +161,74 @@ Now we use `cut` to get out that specific column. But we only need the distinct 
 cut -d ';' -f 3 alltrees.csv | uniq
 ```
 
-> Note: You must always use the command `sort` on the data you are passing into `uniq`, unless you now for sure that your data is sorted.
+> Note: You must always use the command `sort` on the data you are passing into `uniq`, unless you know for sure that your data is already sorted.
 
 ```
 cut -d ';' -f 23 alltrees.csv | sort | uniq
 ```
 
-You have notices here some names have double quotes around them and some don't. What if we don't want the double quotes? We may remove them with `tr`. The `tr` command replaces characters one by one. It can also delete characters one by one.
+You may have noticed here some names have double quotes around them and some don't. What if we don't want the double quotes? We may remove them with `tr`. The `tr` command replaces characters one by one. It can also delete characters one by one.
 
 ```
 cut -d ';' -f 23 alltrees.csv | sort | uniq | tr -d '"'
 ```
+
+Try to make two lists, each with distinct values from the 3rd (neighbourhood) and the 23rd (street names) columns of the two files.
 
 ```
 tail -n +2 out.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq > streets_vm.csv
 tail -n +2 out2.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq > streets_mr.csv
 ```
 
-now lets try to put the lists side by side
+Now lets try to combine the files horizontally, putting the lists side by side:
 
 ```
 paste -d ";" streets_mr.csv streets_vm.csv
 ```
 
+This may not be very useful in this case, but I am sure you will come up with good uses for it once you have real data!
 
-Now let's sort by the street name. We use `sponge` to buffer the changes and then write them back to the same file. If we don't do this, the file simply gets truncated (can't read from and write to the same file).
+Now let's sort the two files by the street name (2nd column of each side). We use `sponge` to buffer the changes and then write them back to the same file. If we don't do this, the file simply gets truncated (a pipe normally can't read from and write to the same file).
 
 ```
 sort -t ';' -k 2 streets_mr.csv | sponge streets_mr.csv
 sort -t ';' -k 2 streets_vm.csv | sponge streets_vm.csv
 ```
-`-r` makes it descending.
+
+We could as well use the `-r` switch to sort in descending order.
+
+Let's compare the street names and find the commonalities:
+
 ```
 tail -n +2 alltrees.csv | cut -d ';' -f 3,23 | tr -d '"' | sort | uniq | sort -t ';' -k 2
 ```
-Are there any streets shared between pleateau and ville marie? can we do a proper database join here?
+
+Are there any streets shared between Plateau and Ville Marie? Takes time to verify. Could be easier with a proper table join. Can we do it here in the command line? Yes we can:
 
 ```
 join -t ';' -1 2 -2 2 streets_mr.csv streets_vm.csv
 ```
 
-Not really, no. Only the lines with no steet names matched.
+Well, no street name shared by the two neighbourhoods! Only the lines with no street names match between the two files.
 
-# Regular Expressions: Sorcerer's Trick
+# Regular Expressions: Old Dog, Old Tricks
+
+You have probably noticed that this weird file does not print well on the screen. This is because it contains way too many white spaces at the end of each line. Remove those extra characters using the following command:
+
+```
+sed -r 's/\s+$//' alltrees.csv > alltreesclean.csv
+```
+
+Use `ls -l` to see how big is the new file. What do you think about that?
+
+Use `head` to preview the file. Better, isn't it?
+
+I'm a photographer and I really like Tartarian maples. Their color change is completely crazy:
+
+![Tartarian Maple](http://oregonstate.edu/dept/ldplants/images/acta207.jpg "Tartarian Maple")
+
+
+
+# Bonus
+
+If we have time I will show you more on variables and variable substitution in Linux.
