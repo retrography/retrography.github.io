@@ -9,7 +9,7 @@ title:               retrography
 tagline:             'backwardly writing...'
 description:         "I am a PhD candidate at McGill's Desautels Faculty of Management. Having an itch for social theory and a knack for data wrangling, I study the organizational aspects of online communities. Here are some gems I have found along the way."
 url:                 'http://retrography.github.io'
-baseurl:             ''
+baseurl:             '/'
 paginate:            5
 
 # About/contact
