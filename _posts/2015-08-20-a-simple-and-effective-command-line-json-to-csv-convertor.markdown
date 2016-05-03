@@ -2,7 +2,7 @@
 layout: post
 title: "A simple and effective command-line JSON to CSV convertor"
 date: 2015-08-20
-keywords: "r csv tabular json hierarchical data conversion wrangling"
+keywords: "r, csv, tabular, json, hierarchical, data, conversion, wrangling"
 ---
 
 There are many ways to convert well-structured JSONs into tabular formats like CSV. There is a free tool for that in almost every existing language ([Ruby](https://github.com/korczis/json2csv), [Python](https://github.com/evidens/json2csv), [Go](https://github.com/jehiah/json2csv), etc...). Yet, each time I get my hands on real data the actual conversion process seems elusive. The reason is that most JSON convertors offer way too many options and can quickly become more complicated than a proper procedural conversion.

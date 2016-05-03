@@ -2,7 +2,7 @@
 layout: post
 title: "So, what if you have to migrate from Neo4j to OrientDB?"
 date: 2015-04-11
-keywords: "neo4j orientdb graph database etl import export data graphml"
+keywords: "neo4j, orientdb, graph, database, etl, import, export, data, graphml"
 ---
 
 According to [OrientDB's website](http://orientdb.com/docs/last/Import-from-Neo4j-into-OrientDB.html) migrating your data from Neo4j is pretty staightforward, and it involves only three simple steps:

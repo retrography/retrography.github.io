@@ -2,7 +2,7 @@
 layout: post
 title: "So, Scriptella works with Neo4j"
 date: 2014-10-27
-tags: "gist code sna databases graphs neo4j sql cypher mysql xml scriptella etl java jdbc"
+tags: "gist, code, sna, databases, graphs, neo4j, sql, cypher, mysql, xml scriptella etl java jdbc"
 ---
 
 We all know that Neo4j's Cypher has recently had a language upgrade to accommodate ETL. Yes, the graph engine now supports `LOAD CSV` within Cypher scripts. 

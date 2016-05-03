@@ -2,7 +2,7 @@
 layout: post
 title: "This is very cool"
 date: 2016-05-03
-keywords: "new stuff ham"
+keywords: "new, stuff, ham"
 ---
 ​
 An h1 header
