@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This is not cool"
+title: "This is very cool"
 date: 2016-05-03
 keywords: "new stuff ham"
 ---
