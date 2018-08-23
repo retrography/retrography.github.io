@@ -2,8 +2,46 @@
 layout: page
 title: resources
 ---
+# Feeds
 
-A list of resources and tools that I find useful, for me and for every researcher...
+A list of RSS feeds for journals relevant to Organization, Management and Management Information Systems fields (in no particular order)...
+
+* [Research Policy](http://rss.sciencedirect.com/publication/science/00487333) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://www.sciencedirect.com/)
+* [Administrative Science Quarterly](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=asqa&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/asqa?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Journal of Management Inquiry](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=jmia&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/jmia?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Information Systems Research](https://pubsonline.informs.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=isre) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://pubsonline.informs.org/loi/isre?af=R)
+* [Annual Review of Psychology](https://www.annualreviews.org/action/showFeed?jc=psych&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://www.annualreviews.org/loi/psych?af=R)
+* [Strategic Management Journal](https://onlinelibrary.wiley.com/action/showFeed?jc=10970266&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://onlinelibrary.wiley.com/loi/10970266?af=R)
+* [American Journal of Sociology](https://www.journals.uchicago.edu/action/showFeed?type=etoc&amp;feed=rss&amp;jc=ajs) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://www.journals.uchicago.edu/loi/ajs?af=R)
+* [Information Technology &amp; People](https://www.emeraldinsight.com/action/showFeed?type=etoc&amp;feed=rss&amp;jc=itp) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://www.emeraldinsight.com/loi/itp?af=R)
+* [Strategic Organization](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=soqa&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/soqa?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Academy of Management Journal](https://journals.aom.org/action/showFeed?jc=amj&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/amj?af=R)
+* [Journal of the Association for Information Systems](https://aisel.aisnet.org/jais/recent.rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://aisel.aisnet.org/jais)
+* [Organization Studies](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=ossa&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/ossa?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [MIS Quarterly](https://aisel.aisnet.org/misq/recent.rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://aisel.aisnet.org/misq)
+* [Organization](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=orga&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/orga?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Journal of Management](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=joma&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/joma?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Social Networks](http://rss.sciencedirect.com/publication/science/03788733) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://www.sciencedirect.com/)
+* [Journal of Management Studies](https://onlinelibrary.wiley.com/action/showFeed?jc=14676486&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://onlinelibrary.wiley.com/loi/14676486?af=R)
+* [Journal of Applied Psychology](http://content.apa.org/journals/apl.rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://psycnet.apa.org/journals/apl)
+* [American Sociological Review](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=asra&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/asra?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [Organizational Research Methods](http://journals.sagepub.com/action/showFeed?ui=0&amp;mi=ehikzz&amp;ai=2b4&amp;jc=orma&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://journals.sagepub.com/loi/orma?ai=2b4&amp;mi=ehikzz&amp;af=R)
+* [R&amp;D Management](https://onlinelibrary.wiley.com/action/showFeed?jc=14679310&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://onlinelibrary.wiley.com/loi/14679310?af=R)
+* [Journal of Strategic Information Systems](http://rss.sciencedirect.com/publication/science/09638687) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://www.sciencedirect.com/)
+* [Long Range Planning](http://rss.sciencedirect.com/publication/science/00246301) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://www.sciencedirect.com/)
+* [Annual Review of Sociology](https://www.annualreviews.org/action/showFeed?jc=soc&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://www.annualreviews.org/loi/soc?af=R)
+* [Academy of Management Annals](https://journals.aom.org/action/showFeed?jc=annals&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/annals?af=R)
+* [Academy of Management Learning &amp; Education](https://journals.aom.org/action/showFeed?jc=amle&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/amle?af=R)
+* [Academy of Management Perspectives](https://journals.aom.org/action/showFeed?jc=amp&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/amp?af=R)
+* [Academy of Management Review](https://journals.aom.org/action/showFeed?jc=amr&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/amr?af=R)
+* [Academy of Management Discoveries](https://journals.aom.org/action/showFeed?jc=amd&amp;type=etoc&amp;feed=rss) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](https://journals.aom.org/loi/amd?af=R)
+* [Organization Science](http://pubsonline.informs.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=orsc) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://pubsonline.informs.org/loi/orsc?af=R)
+* [Nature Human Behaviour](http://feeds.nature.com/nathumbehav/rss/current) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://feeds.nature.com/nathumbehav/rss/current)
+* [Management Science](http://pubsonline.informs.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=mnsc) [<img src="/public/image/rss.svg" alt="Feed" width="12"/>](http://pubsonline.informs.org/loi/mnsc?af=R)
+
+# Tools
+
+A list of tools that I find useful, for me and for every researcher...
 
 ## Data Wrangling & Analysis
 
