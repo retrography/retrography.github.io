@@ -75,14 +75,14 @@ A list of tools that I find useful, for me and for every researcher...
 	* [RStudio](https://www.rstudio.com) -- The IDE
 	* [Revolution R](https://mran.revolutionanalytics.com/download/) -- The better, faster R
 	* Packages
-		* [dplyr Package]() -- Data Frame manipulation made easy ([Intro](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) | [Course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) | [Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) | [On plyr](http://seananderson.ca/2013/12/01/plyr.html))
-		* [tidyr Package](https://cran.r-project.org/web/packages/tidyr/index.html) -- Unmess your data ([Vignette](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) | [Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
+		* [dplyr Package]() -- Data Frame manipulation made easy ([Intro](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) &#124; [Course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) &#124; [Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) &#124; [On plyr](http://seananderson.ca/2013/12/01/plyr.html))
+		* [tidyr Package](https://cran.r-project.org/web/packages/tidyr/index.html) -- Unmess your data ([Vignette](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) &#124; [Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
 		* [reshape2 Package](https://cran.r-project.org/web/packages/reshape2/index.html) -- From wide to long data and vice versa ([Intro](http://seananderson.ca/2013/10/19/reshape.html))
-		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([Vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) | [dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
+		* [magrittr Package](https://cran.r-project.org/web/packages/magrittr/index.html) -- Linux pipes for R ([Vignette](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) &#124; [dplyr and pipes](http://seananderson.ca/2014/09/13/dplyr-intro.html))
 		* [jsonlite Package](https://cran.r-project.org/web/packages/jsonlite/index.html) -- From JSON to Data Frame
 		* [lubridate Package](https://cran.r-project.org/web/packages/lubridate/index.html) -- Date/Time lubricated and on steroids ([Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html))
 		* [stringr Package](https://cran.r-project.org/web/packages/stringr/index.html) -- Strings for mere mortals ([Vignette](https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html))
-		* [data.table Package](https://cran.r-project.org/web/packages/data.table/index.html) -- The most usable data frame extension ([Intro](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.pdf) | Vignettes: [Basics](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro-vignette.html), [Keys & Search](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-keys-fast-subset.html), [Referencing](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-reference-semantics.html), [Reshaping](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-reshape.html) | [Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/img/blog/data+table+cheat+sheet.pdf))
+		* [data.table Package](https://cran.r-project.org/web/packages/data.table/index.html) -- The most usable data frame extension ([Intro](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.pdf) &#124; Vignettes: [Basics](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro-vignette.html), [Keys & Search](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-keys-fast-subset.html), [Referencing](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-reference-semantics.html), [Reshaping](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-reshape.html) &#124; [Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/img/blog/data+table+cheat+sheet.pdf))
 
 * [Python](https://www.python.org) -- The serious
 
@@ -156,5 +156,3 @@ A list of tools that I find useful, for me and for every researcher...
 * [Vim](http://www.vim.org/) -- The classic
 * [Textmate](http://macromates.com) -- The pro choice
 * [Atom](https://atom.io) -- The chameleon/editor
-
-
